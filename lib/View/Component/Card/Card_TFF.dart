@@ -4,6 +4,8 @@ class Custom_Card_TTF extends StatelessWidget {
   TextEditingController? titleController;
 
   String? title;
+  bool? readonly;
+  double?borderRadius;
   String? image;
   Widget? suffixIcon;
   Widget? prefixIcon;
@@ -16,6 +18,8 @@ class Custom_Card_TTF extends StatelessWidget {
       {Key? key,
         this.titleController,
         this.title,
+        this.readonly,
+        this.borderRadius,
         this.image,
         this.suffixIcon,
         this.prefixIcon,

@@ -35,7 +35,7 @@ class SectionFive extends StatelessWidget {
                     decoration: const BoxDecoration(
                         image: DecorationImage(
                           image: AssetImage(
-                            'assets/icons/Icon material-pets.png',
+                            'Assets/Images/FooterBackground.png',
                           ),
                         )),
                   ),
@@ -68,7 +68,7 @@ class SectionFive extends StatelessWidget {
                           decoration: BoxDecoration(
                             image: DecorationImage(
                               image: AssetImage(
-                                'assets/images/Ellipse 12.png',
+                                'Assets/Images/Group 7.png',
                               ),
                             ),
                           ),

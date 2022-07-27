@@ -97,7 +97,7 @@ class SectionOne extends StatelessWidget {
                     decoration: BoxDecoration(
                         image: DecorationImage(
                           image: AssetImage(
-                              'assets/images/image1.png'),
+                              'Assets/Images/Elsa.png'),
                         )),
                   ),
                 ),

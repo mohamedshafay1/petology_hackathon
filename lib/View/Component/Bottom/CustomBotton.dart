@@ -8,6 +8,7 @@ class CustomButton extends StatelessWidget {
   Color? borderColor;
   double?height;
   double?width;
+  double?borderRadius;
 
 
   CustomButton(
@@ -19,7 +20,8 @@ class CustomButton extends StatelessWidget {
         this.text,
         this.fontSize,
         this.onPressed,
-        this.image});
+        this.borderRadius,
+        this.image,});
 
   Color? backColor;
   String? text;

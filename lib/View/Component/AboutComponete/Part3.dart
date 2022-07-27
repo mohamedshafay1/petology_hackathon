@@ -36,7 +36,7 @@ class SectionThree extends StatelessWidget {
                 decoration: const BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage(
-                        'assets/icons/Icon material-pets.png',
+                        'Assets/Images/FooterBackground.png',
                       ),
                     )),
               ),

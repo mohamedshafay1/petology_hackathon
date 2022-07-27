@@ -8,12 +8,10 @@ import 'Controller/DioHelper.dart';
 //import 'View/Component/Card/Card_TFF.dart';
 import 'View/Screens/AuthenticationScreen/Cubit/cubit.dart';
 import 'View/Screens/AuthenticationScreen/Login.dart';
-//import 'View/Screens/AuthenticationScreen/Signup.dart';
-//import 'View/Screens/Help/HelpScreen.dart';
-import 'View/Screens/HomeScreen/AboutScreen/AboutScreen.dart';
-//import 'View/Screens/HomeScreen/HomeScreen.dart';
 
-import 'View/Screens/Request/RequestScreen.dart';
+import 'View/Screens/HomeScreen/AboutScreen/AboutScreen.dart';
+
+
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -72,7 +70,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: AboutScreen(),
+      home: startScreen,
     );
 
   }

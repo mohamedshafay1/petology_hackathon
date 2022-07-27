@@ -35,7 +35,7 @@ class SectionFour extends StatelessWidget {
                 decoration: const BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage(
-                        'assets/icons/Icon material-pets.png',
+                        'Assets/Images/FooterBackground.png',
                       ),
                     )),
               )
@@ -68,7 +68,7 @@ class SectionFour extends StatelessWidget {
                     height: 180,
                     width: double.infinity,
                     child: Image.asset(
-                      'assets/images/karsten-winegeart-Qb7D1xw28Co-unsplash-removebg-preview.png',
+                      'Assets/Images/karstenDog.png',
                     ),
                   ),
                   SizedBox(
