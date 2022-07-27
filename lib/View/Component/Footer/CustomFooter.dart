@@ -1,7 +1,7 @@
 import 'dart:js';
 
 import 'package:flutter/material.dart';
-import '../../../Constant.dart';
+import '../../../Constant/Constant.dart';
 import 'ContactItemBuilder.dart';
 
 class footerBuilder extends StatelessWidget {

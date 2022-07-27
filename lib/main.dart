@@ -1,18 +1,51 @@
 import 'package:flutter/material.dart';
-
-import 'Constant.dart';
-import 'View/Component/Card/Card_TFF.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:petology/View/Screens/HomeScreen/Cuibt/AppCuibt.dart';
+import 'Constant/Constant.dart';
+import 'Constant/EndPoint.dart';
+import 'Controller/CachHelper.dart';
+import 'Controller/DioHelper.dart';
+//import 'View/Component/Card/Card_TFF.dart';
+import 'View/Screens/AuthenticationScreen/Cubit/cubit.dart';
 import 'View/Screens/AuthenticationScreen/Login.dart';
-import 'View/Screens/AuthenticationScreen/Signup.dart';
-import 'View/Screens/HelpScreen.dart';
-import 'View/Screens/RequestScreen.dart';
+//import 'View/Screens/AuthenticationScreen/Signup.dart';
+//import 'View/Screens/Help/HelpScreen.dart';
+import 'View/Screens/HomeScreen/AboutScreen/AboutScreen.dart';
+//import 'View/Screens/HomeScreen/HomeScreen.dart';
 
-void main() {
-  runApp(const MyApp());
+import 'View/Screens/Request/RequestScreen.dart';
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  DioHelper.init();
+  await CacheHelper.init();
+  token = CacheHelper.getData(key: 'token');
+  Widget startScreen;
+  if (token != null) {
+    startScreen = AboutScreen();
+  } else {
+    startScreen = Login();
+  }
+
+  runApp(MultiBlocProvider(providers: [
+    BlocProvider<AuthCubit>(create: (context) => AuthCubit()),
+    BlocProvider<AppCubit>(
+        create: (context) => AppCubit()
+          ..getInfoData()
+          ..getFirstSectionData()
+          ..getHowToFeedData()
+          ..getFilterData()
+
+    )
+  ], child: MyApp(token: token, startScreen: startScreen)));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  var token;
+  Widget startScreen;
+
+  MyApp({this.token, required this.startScreen});
 
   // This widget is the root of your application.
   @override
@@ -39,7 +72,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: HelpScreen(),
+      home: AboutScreen(),
     );
 
   }

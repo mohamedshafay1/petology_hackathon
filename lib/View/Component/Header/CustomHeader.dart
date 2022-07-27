@@ -4,11 +4,19 @@ import 'package:petology/View/Component/Bottom/CustomBotton.dart';
 // import 'package:petology/view/widgets/AuthWidgets/LoginScreen/MenuItem.dart';
 // import 'package:petology/view/widgets/CustomButton.dart';
 
-import '../../../Constant.dart';
+import '../../../Constant/Constant.dart';
 
-class Header extends StatelessWidget {
-  const Header({Key? key}) : super(key: key);
+class Header extends StatefulWidget {
 
+  List<GlobalKey>? sections ;
+
+  Header({this.sections});
+
+  @override
+  State<Header> createState() => _HeaderState();
+}
+
+class _HeaderState extends State<Header> {
   @override
   Widget build(BuildContext context) {
     return Container(

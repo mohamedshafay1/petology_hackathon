@@ -4,7 +4,7 @@ import 'package:petology/View/Component/Card/Card_TFF.dart';
 import 'package:petology/View/Component/Footer/CustomFooter.dart';
 import 'package:petology/View/Component/Header/CustomHeader.dart';
 
-import '../../../Constant.dart';
+import '../../../Constant/Constant.dart';
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
 

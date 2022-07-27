@@ -39,6 +39,9 @@ dependencies:
   flutter_bloc:
   image_picker:
   flutter_svg:
+  shared_preferences:
+  conditional_builder_null_safety:
+  smooth_page_indicator:
 
 dev_dependencies:
   flutter_test:
