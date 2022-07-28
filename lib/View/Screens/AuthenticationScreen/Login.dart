@@ -6,8 +6,10 @@ import 'package:petology/View/Component/Header/CustomHeader.dart';
 
 import '../../../Constant/Constant.dart';
 class Login extends StatelessWidget {
-  const Login({Key? key}) : super(key: key);
 
+  var emailController = TextEditingController();
+  var passwordController = TextEditingController();
+  var formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
